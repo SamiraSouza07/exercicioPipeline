@@ -19,13 +19,13 @@ jobs:
     - name: Compilando
       run: javac src/Main.java
       
-    - name: Executar
+    - name: Executando
       run: java src/Main.java
     
     - uses: mr-smithers-excellent/docker-build-push@v6
       name: Build & push Docker image
       with:
-        image: samirasouza/image_java_qa
+        image: samirasouza/image_java
         tags: ${{github.run_number}}
         registry: docker.io
         dockerfile: dockerfile
